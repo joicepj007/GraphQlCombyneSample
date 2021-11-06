@@ -15,6 +15,8 @@ import androidx.fragment.app.viewModels
 import com.android.graphqlcmbnesample.R
 import com.android.graphqlcmbnesample.databinding.FragmentAddMovieBinding
 import com.android.graphqlcmbnesample.presentation.OnHomeButtonClickCallback
+import com.android.graphqlcmbnesample.util.PATTERN_SERVER_DATE_TIME
+import com.android.graphqlcmbnesample.util.PATTERN_START_WITH_MONTH
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import java.text.SimpleDateFormat
@@ -22,6 +24,7 @@ import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 import com.android.graphqlcmbnesample.util.ViewState
+import com.android.graphqlcmbnesample.util.convertDateString
 
 @ExperimentalCoroutinesApi
 @AndroidEntryPoint
@@ -76,10 +79,14 @@ class AddTvShowsFragment : Fragment() {
     }
 
     private fun updateDateInView() {
-        val PATTERN_SERVER_DATE_TIME = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
-        val myFormat = PATTERN_SERVER_DATE_TIME // mention the format you need
-        val sdf = SimpleDateFormat(myFormat, Locale.US)
-        binding.tvReleasedate.setText(sdf.format(cal.time))
+        val sdf = SimpleDateFormat(PATTERN_SERVER_DATE_TIME, Locale.US)
+        val formatteDate = convertDateString(
+            PATTERN_SERVER_DATE_TIME,
+            PATTERN_START_WITH_MONTH,
+            sdf.format(cal.time)
+        )
+
+        binding.tvReleasedate.setText(formatteDate)
         dateFormat = cal.time
     }
 
