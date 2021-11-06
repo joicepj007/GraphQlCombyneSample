@@ -1,0 +1,21 @@
+query GetTvShows($order:[MovieOrder!]){
+    movies(order:$order) {
+        pageInfo {
+            hasNextPage
+            hasPreviousPage
+            startCursor
+            endCursor
+        }
+        edges {
+            node {
+                id
+                title
+                releaseDate
+                seasons
+            }
+            cursor
+        }
+        count
+    }
+
+}

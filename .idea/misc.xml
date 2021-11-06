@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/joice.p/Documents/data/Combyne/app/src/main/res/layout/activity_main.xml" value="0.22395833333333334" />
+        <entry key="..\:/Users/joice.p/Documents/data/Combyne/app/src/main/res/layout/fragment_add_movie.xml" value="0.2421875" />
+        <entry key="..\:/Users/joice.p/Documents/data/Combyne/app/src/main/res/layout/fragment_home_screen.xml" value="0.22395833333333334" />
+        <entry key="..\:/Users/joice.p/Documents/data/Combyne/app/src/main/res/layout/fragment_movies_list.xml" value="0.22395833333333334" />
+        <entry key="..\:/Users/joice.p/Documents/data/Combyne/app/src/main/res/layout/holder_item.xml" value="0.22395833333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

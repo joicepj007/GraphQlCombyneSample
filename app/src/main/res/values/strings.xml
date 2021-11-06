@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">GraphQlCmbneSample</string>
+    <string name="no_network_connection">No Network Connection</string>
+    <string name="str_action_bar_title">TV SHOW MANAGER</string>
+    <string name="str_retry">Retry</string>
+    <string name="str_no_internet">No Internet Connection</string>
+    <string name="add_new_tv_show">ADD NEW TV SHOW</string>
+    <string name="show_list_of_added_tv_shows">SHOW LIST OF ADDED TV SHOWS</string>
+    <string name="tv_show">Tv Show</string>
+    <string name="release_date">Release Date</string>
+    <string name="seasons">Seasons</string>
+    <string name="save_tv_show">SAVE TV SHOW</string>
+    <string name="str_tv_show">This field is required</string>
+    <string name="str_releasedate">This field is required</string>
+    <string name="str_seasons">This field is required</string>
+</resources>

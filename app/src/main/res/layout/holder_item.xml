@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="movies"
+            type="com.android.graphqlcmbnesample.GetTvShowsQuery.Edge" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_card_img_hieght"
+        android:layout_margin="@dimen/marginr_10"
+        app:cardCornerRadius="@dimen/marginr_8"
+        app:cardElevation="@dimen/marginr_4"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginr_10"
+                android:layout_marginStart="@dimen/marginr_10"
+                android:ellipsize="end"
+                android:text="@{movies.node.title}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/marginr_18sp" />
+
+            <TextView
+                android:id="@+id/tv_release"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginr_10"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/marginr_6"
+                android:textColor="@color/black"
+                android:textSize="@dimen/marginr_18sp" />
+
+            <TextView
+                android:id="@+id/tv_season"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginr_10"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/marginr_6"
+                android:text="@{movies.node.seasons.toString()}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/marginr_18sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

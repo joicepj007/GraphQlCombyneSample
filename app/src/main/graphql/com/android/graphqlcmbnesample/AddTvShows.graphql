@@ -1,0 +1,14 @@
+mutation AddTvShows($input: CreateMovieInput!){
+  createMovie(input:$input){
+    movie{
+      id
+      objectId
+      createdAt
+      updatedAt
+      title
+      releaseDate
+      seasons
+    }
+    clientMutationId
+  }
+}
